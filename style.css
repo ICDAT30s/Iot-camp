@@ -52,7 +52,7 @@ ul{
 ul li{
     list-style: none;
     margin-left: 100px;   /* ระยะห่างของ menu */
-    margin-top: 27px;
+    margin-top: 40px;
     font-size: 14px;
 }
 
@@ -80,7 +80,7 @@ ul li a:hover{
     height: 37px;
     background: transparent ;
     border: 1px solid #ff7200;
-    margin-top: 13px;    /*ระยะห่างจากข้างบน*/
+    margin-top: 30px;    /*ระยะห่างจากข้างบน*/
     color: #fff;
     border-right: none;
     font-size: 16px;
@@ -96,7 +96,7 @@ ul li a:hover{
     height: 37px;
     background: #ff7200;
     border: 2px solid #ff7200;
-    margin-top: 13px;
+    margin-top: 30px;
     color: #fff;
     font-size: 15px;
     border-bottom-right-radius: 5px;  
@@ -147,16 +147,23 @@ ul li a:hover{
     border-radius: 10px;
     cursor: pointer;
     transition: .4s ease;
+    background: transparent ;
+    border: 2px solid #ff7200;
 }
 
 .content .cn .a{
     text-decoration: none;
     color: #fff;
+    border: 2px solid #fff;
+    font-weight: 500px;
+    border-radius: 40px;
     transition: .3s ease;
+    
 }
 
 .cn:hover{
-    background-color: #fff;
+    background-color: #ff7200;
+    
 
 }
 
@@ -253,7 +260,7 @@ ul li a:hover{
     text-align: center;
 }
 
-.icons a{
+/* .icons a{
     text-decoration: none;
     color: #fff;
 }
@@ -269,7 +276,7 @@ ul li a:hover{
 
 .icons ion-icon:hover{
     color: #ff7200;
-}
+} */
 
 .content1{
     font-family: sans-serif;
@@ -280,4 +287,32 @@ ul li a:hover{
     text-align: center;
     align-content: center;
 }
+
+.content2{
+    font-family: Arial;
+    color: #363636;
+    position: relative;
+    text-align: center;
+    margin-top: 230px;
+    font-size: 5px;
+    
+}
+
+
+.error {
+    color: red;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ส่วนของ contact.html*/
+
+
+
   

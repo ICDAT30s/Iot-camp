@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <title>Webpage Design</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-
     <div class="main">
         <div class="navbar">
             <div class="icon">
                 <img src="https://cdn.discordapp.com/attachments/1293581190070014044/1314240517541990480/iote_pic.png?ex=67530d5c&is=6751bbdc&hm=bda50e82164e91d4b0f88756d1991190b835c5d8aa593477438060c904bee5f6&">
-
             </div>
 
             <div class="menu">
@@ -21,7 +17,7 @@
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">SERVICE</a></li>
                     <li><a href="#">DESIGN</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="test.html">CONTACT</a></li>
                 </ul>
             </div>
 
@@ -37,47 +33,58 @@
                 <br>Explore key techniques for detecting and mitigating vulnerabilities. 
                 <br>Step into the world of cyber security engineering and safeguard the digital age."</p>
 
-                <button class="cn"><a href="https://www.iote.kmitl.ac.th/">JOIN US</a></button>
+            <button class="cn"><a href="https://www.iote.kmitl.ac.th/">JOIN US</a></button>
 
-                <div class="form">
-                    <h2>Login Here</h2>
-                    <input type="email" name="email" placeholder="Enter Email or Username Here">
-                    <input type="password" name="" placeholder="Enter Password Here">
-                    <button class="btnn"><a href="index2.html">Login</a></button>
+            <div class="form">
+                <h2>Login Here</h2>
+                <input id="username" type="email" name="email" placeholder="Enter Email or Username Here">
+                <input id="password" type="password" name="" placeholder="Enter Password Here">
+                <p id="error-message" class="error hidden">Incorrect Username or Password</p>
+                <button class="btnn" onclick="validateLogin()">Login</button>
 
-                    <p class="link">Don't have an account<br>
-                    <a href="#">Sign up </a>here</a></p>
-                    <p class="liw">Log in with</p>
+                <p class="link">Don't have an account ?<br>
+                <a href="#">Sign up </a>here</p>
+                <!-- <p class="liw">Log in with</p> -->
 
-                    <div class="icons">
-                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
-                    </div>
-                </div>
+                <!-- <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                </div> -->
+            </div>
         </div>
+        <div class="content2">
+            <h1>IoTE CAMP#01,IoT System and Information Engineering,KMITL</h1>
+        </div>   
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script>
         function validateLogin() {
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value.trim();
+            const errorMessage = document.getElementById('error-message');
+
+            errorMessage.classList.add('hidden');
 
             // ตรวจสอบว่า Username และ Password ไม่เว้นว่าง
             if (!username || !password) {
-                alert('Please fill in both Username and Password');
+                errorMessage.textContent = 'Please fill in both Username and Password';
+                errorMessage.classList.remove('hidden');
                 return;
             }
 
             // ตรวจสอบว่า Username และ Password ตรงตามที่กำหนด
             if (username === 'IoTECAMP' && password === '12345678') {
+                // ซ่อนข้อความแจ้งเตือน
+                // errorMessage.classList.add('hidden');
                 // ไปยังหน้าที่ต้องการ
                 window.location.href = 'index2.html';
             } else {
-                // แจ้งเตือนเมื่อข้อมูลไม่ถูกต้อง
-                alert('Incorrect Username or Password');
+                // แสดงข้อความแจ้งเตือนเมื่อข้อมูลไม่ถูกต้อง
+                errorMessage.textContent = 'X Incorrect Username or Password';
+                errorMessage.classList.remove('hidden');
             }
         }
     </script>
